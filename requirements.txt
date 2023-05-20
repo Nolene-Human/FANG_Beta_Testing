@@ -10,5 +10,4 @@ qrcode==7.4.2
 Requests==2.30.0
 scapy==2.5.0
 streamlit==1.20.0
-streamlit_extras==0.2.7
 streamlit_lottie==0.0.3
