@@ -27,8 +27,6 @@ import json
 from streamlit_lottie import st_lottie
 import Art.Animation.lottie_animations
 
-import unique_streamlit.session_states
-
 auth= Firebase.firebaseconfig.firebase_auth()
 database=Firebase.firebaseconfig.firebase_database()
 
