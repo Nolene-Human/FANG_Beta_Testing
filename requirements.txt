@@ -1,6 +1,7 @@
 Pillow==9.5.0
 Pyrebase4==4.6.0
 qrcode==7.4.2
-Requests==2.30.0
+requests
+urllib3<2
 streamlit==1.22.0
 streamlit_lottie==0.0.3
