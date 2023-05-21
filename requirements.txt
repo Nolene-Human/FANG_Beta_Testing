@@ -6,3 +6,4 @@ urllib3<2
 requests_toolbelt<1.0.0
 streamlit==1.22.0
 streamlit_lottie==0.0.3
+pyotp==2.8.0
