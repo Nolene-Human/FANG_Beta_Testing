@@ -22,7 +22,7 @@ def password_check(passwd):
         val = False
          
     if not any(char in SpecialSym for char in passwd):
-        lit.write('Password should have at least one of the symbols $, @, #, %, !)
+        lit.write('Password should have at least one of the symbols $, @, #, %, !')
         val = False
     if val:
         return val
