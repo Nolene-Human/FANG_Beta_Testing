@@ -68,7 +68,7 @@ def register():
        
 
     col2.markdown("**You will need a Multi-Factor one-time-passcode to use this application**")
-    col2.write("Scan the QRcode using your Google Authentication APP to get registered")
+    col2.write("Scan the QRcode using your favourite authentication APP to get registered")
     
     
     col2.markdown("---")
