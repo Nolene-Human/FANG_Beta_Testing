@@ -21,7 +21,7 @@ import requests
 ## ______________________________________________________________________________________________________________________##
 
 import Firebase.firebaseconfig # Firebase Configuartion and Authentication Function
-import registered_pages.zero_trust # if successfull navigate user to the zero_trust landing page -> User Dashboard
+#import registered_pages.zero_trust # if successfull navigate user to the zero_trust landing page -> User Dashboard
 
 database=Firebase.firebaseconfig.firebase_database()
 auth= Firebase.firebaseconfig.firebase_auth()
@@ -38,7 +38,7 @@ def login(email,password):
 
                name=database.child(user["idToken"]).child('AccountName').get().val() #read user data from database and write a greeting  message
                lit.sidebar.subheader("Hi " + name + " Network")
-               user_page()
+               #user_page()
                    
      except requests.exceptions.HTTPError as err:
           lit.write(err)
