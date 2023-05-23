@@ -97,8 +97,7 @@ def register():
                             database.child(user['localId']).child("mfa").set(0)
                             database.child(user['localId']).child("vault").push({"accName" : handle,"web":"www.fang.com","username":email,"password":password})
                             # Sidebar gets updated with Success message
-                            lit.sidebar.success("""Your Account has been created!\n
-                            Next step, register for one time passcode authentication """)
+                            lit.sidebar.success("Your Account has been created!")
                             lit.balloons()                       
 
             
