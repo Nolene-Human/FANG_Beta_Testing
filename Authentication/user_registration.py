@@ -103,5 +103,5 @@ def register():
 
             
                 except requests.exceptions.HTTPError as error:
-                    lit.sidebar.error("Please check check your email entered, it is either already registered or not a valid email.")
+                    lit.sidebar.error("Please check your email entered, it is either already registered or not a valid email.")
       
