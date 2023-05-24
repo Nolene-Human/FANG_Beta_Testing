@@ -18,7 +18,7 @@ import Authentication.user_registration
 import Authentication.user_login
 import Firebase.firebaseconfig
 import Authentication.mfa
-import Security.remove_QR
+
 
 import Authentication.loginform 
 import requests
@@ -81,11 +81,7 @@ if home == 'Login':
                                 emailcol.success("Great you are now registered")
                                 database.child(user['localId']).update({"mfa":1})
                                 emailcol.header("You are logged in!")
-                                emailcol.write("Thank you for testing ")
-                                with lit.spinner('We are deleting your QR code for security reasons'):
-                                        time.sleep(5)
-                                        Security.remove_QR.del_QR()
-                                lit.success('Done!')
+                                emailcol.write("Thank you for testing ")                               
         
 
                         else:
