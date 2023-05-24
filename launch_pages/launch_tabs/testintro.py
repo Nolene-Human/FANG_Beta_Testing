@@ -17,7 +17,7 @@ def testing1():
     This is a the fist version of the applications MVP\n
     The testing does not include UI/UX feedback. Although an endeavor was made to make a good and usable product, not all resources were put into the UX/UI design,
     therefore you might note some inconsistencies among pages, especially around forms.\n
-    **I value your feedback so if the question was not ask it does not mean you can provide the feedback (even if it is UX/UI), the last part of each section will have an option for you to add your notes, go wild.**\n""")
+    **I value your feedback even if it is UX/UI :sparkles: , the last part of each section will have an option for you to add your notes, go wild.**\n""")
 
 
     col2.markdown("""
