@@ -106,7 +106,7 @@ if home == 'Login':
                                         lit.sidebar.error("**Code not valid**")               
                         
         except requests.exceptions.HTTPError as err:
-                lit.markdown("*Please enter valid info*") 
+                lit.write("You are not registered under this account") 
 
         
 
