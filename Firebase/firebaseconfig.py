@@ -20,7 +20,7 @@ def firebase_config():
         'messagingSenderId': "601603660956",
         'appId': "1:601603660956:web:844e256757af50cc2be159",
         'measurementId': "G-JTL2XV1WG8",
-        'serviceAccount':'/etc/secrets/firebase'
+        'serviceAccount':'/etc/secrets/beta'
     }
     firebase = pyrebase.initialize_app(firebaseConfig)   
     return firebase  
