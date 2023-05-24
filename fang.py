@@ -18,7 +18,7 @@ import Authentication.user_registration
 import Authentication.user_login
 import Firebase.firebaseconfig
 import Authentication.mfa
-import Art.Animation
+import Security.remove_QR
 
 import Authentication.loginform 
 import requests
@@ -30,6 +30,7 @@ from streamlit_lottie import st_lottie
 
 import pyotp
 import qrcode
+import time
 
 auth= Firebase.firebaseconfig.firebase_auth()
 database=Firebase.firebaseconfig.firebase_database()
@@ -65,7 +66,7 @@ if home == 'Login':
                 mfa_check=database.child(user['localId']).child("mfa").get().val()
                 
                 if mfa_check==0:
-                        emailcol.warning("You are not enrolled for MFA, please register before continuing")
+                        emailcol.warning("FANG uses time-based one-time passcodes (TOTP) that are compliant with all major authenticator apps and browser extensions including 1Password, Authy, and Google Authenticator.")
                         new_OTP=database.child(user['localId']).child("Userkey").get().val()
                         generated_OTP=Authentication.mfa.generatepin(new_OTP)
                         passwordcol.write("**Open or Download your favourite Authentication app**")
@@ -81,6 +82,10 @@ if home == 'Login':
                                 database.child(user['localId']).update({"mfa":1})
                                 emailcol.header("You are logged in!")
                                 emailcol.write("Thank you for testing ")
+                                with lit.spinner('We are deleting your QR code for security reasons'):
+                                        time.sleep(5)
+                                        Security.remove_QR.del_QR()
+                                lit.success('Done!')
         
 
                         else:
